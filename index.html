@@ -1,12 +1,285 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Test GitHub Pages</title>
+  <meta charset="UTF-8">
+  <title>Révisions Concours Geipi Polytech – Mathématiques & NSI</title>
+  <!-- CSS pour une présentation épurée -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 20px 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #333;
+      margin-top: 20px;
+    }
+    p {
+      margin: 10px 0;
+    }
+    ul {
+      margin: 10px 0 10px 20px;
+    }
+    .example {
+      background: #f0f0f0;
+      padding: 10px;
+      border-left: 4px solid #007ACC;
+      margin: 15px 0;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      overflow-x: auto;
+      border-radius: 4px;
+    }
+    code {
+      font-family: "Courier New", monospace;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 40px;
+    }
+  </style>
+  <!-- Inclusion de MathJax pour le rendu des formules LaTeX -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 <body>
-    <h1>Bienvenue sur mon site hébergé sur GitHub Pages !</h1>
-    <p>Si vous voyez cette page, cela signifie que votre hébergement fonctionne.</p>
+  <div class="container">
+    <h1>Révisions Concours Geipi Polytech</h1>
+    <h2>Mathématiques</h2>
+    
+    <!-- Section Suites, Limites et Convergence -->
+    <section id="math-suites">
+      <h3>1. Suites, Limites et Convergence</h3>
+      <p>
+        Une suite \((u_n)\) est une fonction définie sur \(\mathbb{N}\). On étudie notamment :
+      </p>
+      <ul>
+        <li>
+          <strong>Inégalité de Bernoulli :</strong> \((1 + a)^n \geq 1 + na\) pour \(a > 0\) et \(n \in \mathbb{N}\).
+        </li>
+        <li>
+          <strong>Convergence :</strong> On dit que \((u_n)\) converge vers \(\ell\) si pour tout \(\varepsilon > 0\), il existe \(N\) tel que \(\forall n \geq N,\; |u_n - \ell| < \varepsilon\).
+        </li>
+        <li>
+          <strong>Suites monotones :</strong> Une suite croissante majorée (ou décroissante minorée) est convergente.
+        </li>
+      </ul>
+      <div class="example">
+        <p><em>Exemple :</em> La suite \(u_n = \left(1 + \frac{1}{n}\right)^n\) converge vers \(e\).</p>
+      </div>
+    </section>
+
+    <!-- Section Analyse -->
+    <section id="math-analysis">
+      <h3>2. Analyse : Dérivation et Intégration</h3>
+      <p>
+        On étudie les fonctions, leur continuité, leur dérivabilité et l'intégration.
+      </p>
+      <ul>
+        <li>
+          <strong>Continuité :</strong> Une fonction \(f\) est continue en \(a\) si \(\lim_{x\to a} f(x) = f(a)\).
+        </li>
+        <li>
+          <strong>Dérivation :</strong> La dérivée de \(f\) est définie par
+          \[
+          f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}.
+          \]
+        </li>
+        <li>
+          <strong>Intégration :</strong> L'intégrale \(\int_a^b f(x)\,dx\) représente l'aire sous la courbe de \(f\) sur \([a,b]\).
+        </li>
+        <li>
+          <strong>Intégration par parties :</strong> \(\displaystyle \int u\,dv = uv - \int v\,du\).
+        </li>
+      </ul>
+      <div class="example">
+        <p><em>Exemple :</em> Pour \(f(x) = x e^x\), en posant \(u=x\) et \(dv=e^x\,dx\) (donc \(du=dx\) et \(v=e^x\)), on obtient :</p>
+        <p>
+          \(\displaystyle \int x e^x\,dx = x e^x - \int e^x\,dx = x e^x - e^x + C.\)
+        </p>
+      </div>
+    </section>
+
+    <!-- Section Vecteurs, Droites et Plans -->
+    <section id="math-vectors">
+      <h3>3. Vecteurs, Droites et Plans</h3>
+      <ul>
+        <li>
+          <strong>Vecteurs :</strong> Un vecteur \(\vec{v} = (v_x,v_y,v_z)\) dans \(\mathbb{R}^3\) a pour norme \(\|\vec{v}\| = \sqrt{v_x^2+v_y^2+v_z^2}\).
+        </li>
+        <li>
+          <strong>Représentation d'une droite :</strong> Une droite passant par \(A(x_A,y_A,z_A)\) avec vecteur directeur \(\vec{v}=(a,b,c)\) s'exprime par :
+          \[
+          \begin{cases}
+          x = x_A + at,\\[1mm]
+          y = y_A + bt,\\[1mm]
+          z = z_A + ct.
+          \end{cases}
+          \]
+        </li>
+        <li>
+          <strong>Plan :</strong> Un plan est défini par son équation \(Ax+By+Cz+D=0\) où \((A,B,C)\) est un vecteur normal.
+        </li>
+      </ul>
+      <div class="example">
+        <p><em>Exemple :</em> La droite passant par \(A(1,2,3)\) avec vecteur directeur \((2,-1,4)\) se note :</p>
+        <p>
+          \(\displaystyle \begin{cases} x=1+2t,\\ y=2-t,\\ z=3+4t. \end{cases}\)
+        </p>
+      </div>
+    </section>
+
+    <!-- Section Combinatoire -->
+    <section id="math-combinatoire">
+      <h3>4. Combinatoire et Dénombrement</h3>
+      <ul>
+        <li>
+          <strong>Factorielle :</strong> \(n! = 1\times2\times \cdots \times n\).
+        </li>
+        <li>
+          <strong>Combinaisons :</strong> \(\displaystyle \binom{n}{k}=\frac{n!}{k!(n-k)!}\).
+        </li>
+        <li>
+          <strong>Permutations :</strong> Le nombre de permutations d'un ensemble de \(n\) éléments est \(n!\).
+        </li>
+      </ul>
+      <div class="example">
+        <p><em>Exemple :</em> Le nombre de façons de choisir 2 éléments parmi 5 est :</p>
+        <p>\(\displaystyle \binom{5}{2} = \frac{5!}{2!3!} = 10.\)</p>
+      </div>
+    </section>
+
+    <h2>NSI (Numérique et Sciences Informatiques)</h2>
+    
+    <!-- Section Programmation Python -->
+    <section id="nsi-python">
+      <h3>1. Programmation en Python</h3>
+      <p>
+        Les notions de base en Python comprennent la gestion des variables, les conditions, les boucles, les fonctions et la récursivité.
+      </p>
+      <div class="example">
+        <p><em>Exemple :</em> Calcul de la suite de Fibonacci (version récursive et itérative) :</p>
+        <pre><code class="language-python">
+# Version récursive
+def fib(n):
+    if n <= 1:
+        return n
+    else:
+        return fib(n-1) + fib(n-2)
+
+# Version itérative
+def fib_iter(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+
+print(fib(10))       # Affiche 55
+print(fib_iter(10))  # Affiche 55
+        </code></pre>
+      </div>
+    </section>
+
+    <!-- Section Structures de données et algorithmes -->
+    <section id="nsi-structures">
+      <h3>2. Structures de Données et Algorithmes</h3>
+      <ul>
+        <li>
+          <strong>Structures de données :</strong> Listes, tuples, ensembles, dictionnaires.
+        </li>
+        <li>
+          <strong>Algorithmes de tri :</strong> Tri par insertion, tri rapide (quicksort), tri fusion.
+        </li>
+        <li>
+          <strong>Recherche :</strong> Recherche linéaire et recherche binaire.
+        </li>
+      </ul>
+      <div class="example">
+        <p><em>Exemple :</em> Implémentation du tri rapide en Python :</p>
+        <pre><code class="language-python">
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quicksort(left) + middle + quicksort(right)
+
+data = [3,6,8,10,1,2,1]
+print(quicksort(data))  # Affiche [1, 1, 2, 3, 6, 8, 10]
+        </code></pre>
+      </div>
+    </section>
+
+    <!-- Section Graphes et Algorithmes de Parcours -->
+    <section id="nsi-graphes">
+      <h3>3. Graphes et Algorithmes de Parcours</h3>
+      <p>
+        Les graphes permettent de modéliser des relations. Les parcours en largeur (BFS) et en profondeur (DFS) sont essentiels.
+      </p>
+      <div class="example">
+        <p><em>Exemple :</em> Parcours en largeur (BFS) en Python :</p>
+        <pre><code class="language-python">
+from collections import deque
+
+def bfs(graph, start):
+    visited = set()
+    queue = deque([start])
+    while queue:
+        vertex = queue.popleft()
+        if vertex not in visited:
+            print(vertex, end=" ")
+            visited.add(vertex)
+            queue.extend(set(graph[vertex]) - visited)
+
+graph = {
+    'A': ['B', 'C'],
+    'B': ['A', 'D', 'E'],
+    'C': ['A', 'F'],
+    'D': ['B'],
+    'E': ['B', 'F'],
+    'F': ['C', 'E']
+}
+bfs(graph, 'A')  # Affiche : A B C D E F
+        </code></pre>
+      </div>
+    </section>
+
+    <!-- Section SQL (optionnelle) -->
+    <section id="nsi-sql">
+      <h3>4. Gestion des Données et SQL</h3>
+      <p>
+        La gestion des bases de données avec SQL permet d'interroger des ensembles de données.
+      </p>
+      <div class="example">
+        <p><em>Exemple :</em> Requête SQL pour récupérer les étudiants ayant une moyenne supérieure à 15 :</p>
+        <pre><code class="language-sql">
+SELECT * 
+FROM etudiants
+WHERE moyenne > 15;
+        </code></pre>
+      </div>
+    </section>
+    
+    <footer>
+      <p>Révisions Concours Geipi Polytech – Version 1.0</p>
+    </footer>
+  </div>
 </body>
 </html>
